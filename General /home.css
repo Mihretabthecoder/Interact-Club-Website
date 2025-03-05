@@ -1,0 +1,173 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Fullscreen Hero Section */
+.hero {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to right, #001f3f, #007bff);
+    color: white;
+    text-align: center;
+    position: relative;
+}
+
+/* Glassmorphism Container */
+.glass-container {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    padding: 50px;
+    border-radius: 15px;
+    max-width: 600px;
+    animation: fadeIn 2s ease-in-out;
+}
+
+.glass-container h1 {
+    font-size: 48px;
+    margin-bottom: 10px;
+}
+
+.glass-container p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+/* Navigation Bar */
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    padding: 15px 0;
+    z-index: 1000;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1100px;
+    margin: auto;
+    padding: 0 20px;
+}
+
+.logo {
+    font-size: 24px;
+    color: white;
+    font-weight: bold;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    padding: 8px 15px;
+    transition: 0.3s;
+}
+
+nav ul li a:hover {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
+}
+
+/* Features Section */
+.features {
+    text-align: center;
+    padding: 80px 20px;
+    background: white;
+}
+
+.features h2 {
+    font-size: 30px;
+    margin-bottom: 40px;
+}
+
+.feature-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.feature-box {
+    max-width: 300px;
+    padding: 20px;
+    background: #f8f9fa;
+    border-radius: 10px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.feature-box i {
+    font-size: 40px;
+    color: #007bff;
+}
+
+.feature-box:hover {
+    transform: translateY(-10px);
+}
+
+/* Button Styling */
+.btn {
+    text-decoration: none;
+    background: linear-gradient(45deg, #ff416c, #ff4b2b);
+    color: white;
+    padding: 12px 25px;
+    border-radius: 30px;
+    font-size: 16px;
+    transition: 0.3s;
+    box-shadow: 0 4px 15px rgba(255, 0, 0, 0.3);
+}
+
+.btn:hover {
+    background: linear-gradient(45deg, #ff4b2b, #ff416c);
+    box-shadow: 0 6px 20px rgba(255, 0, 0, 0.5);
+}
+
+/* Footer */
+footer {
+    background: #001f3f;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+    }
+
+    .hero h1 {
+        font-size: 36px;
+    }
+
+    .feature-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .feature-box {
+        margin-bottom: 20px;
+    }
+}

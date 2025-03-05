@@ -1,11 +1,13 @@
-document.getElementById("loginForm").addEventListener("submit", function(event) {
-    event.preventDefault(); // Prevent form submission
+// Toggle Password Visibility
+const togglePassword = document.getElementById("togglePassword");
+const passwordField = document.getElementById("password");
 
-    let userType = document.getElementById("userType").value;
-
-    if (userType === "admin") {
-        window.location.href = "admin_dashboard.html";
+togglePassword.addEventListener("click", function () {
+    if (passwordField.type === "password") {
+        passwordField.type = "text";
+        togglePassword.classList.replace("fa-eye-slash", "fa-eye");
     } else {
-        window.location.href = "student_dashboard.html";
+        passwordField.type = "password";
+        togglePassword.classList.replace("fa-eye", "fa-eye-slash");
     }
 });
